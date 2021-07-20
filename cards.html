@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+  transition: ease-out 400ms;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+  transition: ease-out 400ms;
+}
+
+.wrapper{
+	display: flex;
+    flex-direction: row;
+    color: #666;
+}
+
+.wrapper > div{
+	margin: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+     line-height: .3rem;
+     border-radius: 5px;
+	 transition: all 1s;
+}
+
+.wrapper > div:hover{
+	transform: translateY(-20px);
+	opacity: .70;
+	filter:saturate(8); /* blur(5px) */
+	cursor: pointer; /*wait, not-allowed */
+}
+
+img{
+border-top-right-radius: 5px;
+border-top-left-radius: 5px;
+}
+
+a:hover{
+padding: 10px 18px;
+border-radius: 5px;
+margin: 5px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+background-color: skyblue;
+}
+
+p:last-child{
+margin: 30px;
+}
+
+a{
+color: blue;
+}
+
+@media(max-width: 1068px){
+.wrapper{
+ display: flex;
+ flex-direction: column;
+}
+
+p:last-child{
+margin-bottom: 30px;
+}
+
+.wrapper > div{
+min-width: 300px;
+}
+
+img{
+width: 100%;
+height: auto;
+min-width: 300px;
+}
+
+h3{
+font-size: 18px;
+}
+
+h1{
+font-size: 22px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<h2>Animated Button</h2>
+
+<button class="button"><span>Hover </span></button>
+
+<div class="wrapper">
+  <div>
+ <img src="paris.jpg" alt="Paris" width="300" height="300">
+ <h1>Mr. Makayi Honey</h1>
+  <h3>Heading one</h3>
+  <p>Small paragraph</p>
+  <p>
+  <a href="#">Link</a>
+  </p>
+  </div>
+  <div>
+  <img src="paris.jpg" alt="Paris" width="300" height="300">
+  <h1>Heading one</h1>
+  <h3>Heading one</h3>
+  <p>Small paragraph</p>
+  <p>
+  <a href="#">Link</a>
+  </p>
+  </div>
+  <div>
+  <img src="paris.jpg" alt="Paris" width="300" height="300">
+ <h1>Heading one</h1>
+  <h3>Heading one</h3>
+  <p>Small paragraph</p>
+  <p>
+  <a href="#">Link</a>
+  </p>
+  </div>
+</div>
+</body>
+</html>
